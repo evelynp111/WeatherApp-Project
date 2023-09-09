@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
+		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+			crossorigin="anonymous" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="src/styles.css" />
+	</head>
+	<body>
+		<div class="container mt-5 mb-5">
+			<p>Current city:</p>
+
+			<!-- want Los Angeles to sit inline with search bar -->
+			<div class="container">
+				<div class="row justify-content-between">
+					<div
+						class="col-8 fs-1 fw-bolder"
+						id="current-city">
+						<h1>City Placeholder</h1>
+					</div>
+
+					<div class="col-4 align-self-center">
+						<form
+							class="search-container"
+							role="search"
+							id="search-form">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Enter a new city..."
+								aria-label="Search"
+								id="city-input" />
+							<button
+								class="btn btn-outline-secondary btn-sm"
+								type="submit">
+								Search
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<hr />
+			<!--
+	Current Weather Info - GRID
+-->
+			<!-- would like the wind and current temp to sit directly
+	 next to current day and emoji, taking up 40% width total
+	  currentWeatherInfo CSS STYLE-->
+
+			<div class="container text-center pt-3 pb-3">
+				<div class="row">
+					<div
+						class="col fs-2 fw-light"
+						id="date-time">
+						<h2></h2>
+					</div>
+
+					<div class="col">
+						<div class="weather-details">
+							Wind:
+							<span id="wind-speed"></span>mph
+							<br />Humidity: <span id="humidity"></span>%
+						</div>
+					</div>
+					<div class="col-5"></div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm">
+						<span class="current-weather-emoji">☀️</span>
+					</div>
+
+					<div class="col-sm current-temp">
+						<span
+							class="current-temp"
+							id="current-temperature">
+						</span>
+						<span class="current-temp-degree"
+							><a
+								href="#"
+								id="fahrenheit-link"
+								>°F
+							</a>
+							|
+							<a
+								href="#"
+								id="celsius-link"
+								>°C</a
+							>
+						</span>
+					</div>
+					<div class="col-5"></div>
+				</div>
+			</div>
+			<!--
+	Current Weather Info - GRID 
+-->
+
+			<div class="card">
+				<div class="card-title">
+					<div class="row">
+						<div class="col-sm">
+							<h4>Sun.</h4>
+							<h3>🌤</h3>
+							<p><b>90°F </b>| 70°F</p>
+						</div>
+						<div class="col-sm">
+							<h4 class="days">Mon.</h4>
+							<h3>☀️</h3>
+							<p><b>90°F </b>| 71°F</p>
+						</div>
+						<div class="col-sm">
+							<h4 class="days">Tues.</h4>
+							<h3>☀️</h3>
+							<p><b>84°F </b>| 66°F</p>
+						</div>
+						<div class="col-sm">
+							<h4 class="days">Wed.</h4>
+							<h3>⛅️</h3>
+							<p><b>84°F </b>| 74°F</p>
+						</div>
+						<div class="col-sm">
+							<h4 class="days">Thurs.</h4>
+							<h3>🌥</h3>
+							<p><b>83°F </b>| 73°F</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="src/app.js"></script>
+	</body>
+</html>
