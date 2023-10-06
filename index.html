@@ -28,133 +28,133 @@
 	</head>
 	<body>
 		<div class="container mt-5 mb-5">
-			<p>Current city:</p>
+			<div class="weather-app-wrapper">
+				<div class="weather-app">
+					<p>Current city:</p>
+					<div class="container">
+						<div class="row justify-content-between">
+							<div
+								class="col-6 fs-1 fw-bolder"
+								id="current-city">
+								<h1></h1>
+							</div>
+							<div class="col-6 align-self-center">
+								<form
+									class="search-container"
+									role="search"
+									id="search-form">
+									<div class="row">
+										<div class="col-9">
+											<input
+												class="form-control me-2"
+												type="search"
+												placeholder="Type a city name..."
+												aria-label="Search"
+												id="city-input"
+												autocomplete="off" />
+										</div>
+										<div class="col-3 w-90">
+											<button
+												class="btn btn-outline-secondary"
+												type="submit">
+												Search
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div
+							class="container fw-light"
+							id="date-time">
+							<h2></h2>
+						</div>
+					</div>
+					<hr />
 
-			<!-- want Los Angeles to sit inline with search bar -->
-			<div class="container">
-				<div class="row justify-content-between">
-					<div
-						class="col-8 fs-1 fw-bolder"
-						id="current-city">
-						<h1>City Placeholder</h1>
+					<div class="container text-center pt-3 pb-3">
+						<div class="row">
+							<div class="col">
+								<div class="weather-details">
+									Wind:
+									<span id="wind-speed"></span>mph
+									<br />Humidity:
+									<span id="humidity"></span>%
+								</div>
+							</div>
+							<div class="col-5"></div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm">
+								<span class="current-weather-emoji"
+									>☀️</span
+								>
+							</div>
+
+							<div class="col-sm current-temp">
+								<span
+									class="current-temp"
+									id="current-temperature">
+								</span>
+								<span class="current-temp-degree"
+									><a
+										href="#"
+										id="fahrenheit-link"
+										>°F
+									</a>
+									|
+									<a
+										href="#"
+										id="celsius-link"
+										>°C</a
+									>
+								</span>
+							</div>
+							<div class="col-5"></div>
+						</div>
 					</div>
 
-					<div class="col-4 align-self-center">
-						<form
-							class="search-container"
-							role="search"
-							id="search-form">
-							<input
-								class="form-control me-2"
-								type="search"
-								placeholder="Enter a new city..."
-								aria-label="Search"
-								id="city-input" />
-							<button
-								class="btn btn-outline-secondary btn-sm"
-								type="submit">
-								Search
-							</button>
-						</form>
+					<div class="card">
+						<div class="card-title">
+							<div class="row">
+								<div class="col-sm">
+									<h4>Sun.</h4>
+									<h3>🌤</h3>
+									<p><b>90°F </b>| 70°F</p>
+								</div>
+								<div class="col-sm">
+									<h4 class="days">Mon.</h4>
+									<h3>☀️</h3>
+									<p><b>90°F </b>| 71°F</p>
+								</div>
+								<div class="col-sm">
+									<h4 class="days">Tues.</h4>
+									<h3>☀️</h3>
+									<p><b>84°F </b>| 66°F</p>
+								</div>
+								<div class="col-sm">
+									<h4 class="days">Wed.</h4>
+									<h3>⛅️</h3>
+									<p><b>84°F </b>| 74°F</p>
+								</div>
+								<div class="col-sm">
+									<h4 class="days">Thurs.</h4>
+									<h3>🌥</h3>
+									<p><b>83°F </b>| 73°F</p>
+								</div>
+							</div>
+						</div>
 					</div>
+					<p>
+						<a
+							href="https://github.com/evelynp111/WeatherApp-Project"
+							target="_blank">
+							Open-Source code by</a
+						>: Evelyn P.
+					</p>
 				</div>
 			</div>
-
-			<hr />
-			<!--
-	Current Weather Info - GRID
--->
-			<!-- would like the wind and current temp to sit directly
-	 next to current day and emoji, taking up 40% width total
-	  currentWeatherInfo CSS STYLE-->
-
-			<div class="container text-center pt-3 pb-3">
-				<div class="row">
-					<div
-						class="col fs-2 fw-light"
-						id="date-time">
-						<h2></h2>
-					</div>
-
-					<div class="col">
-						<div class="weather-details">
-							Wind:
-							<span id="wind-speed"></span>mph
-							<br />Humidity: <span id="humidity"></span>%
-						</div>
-					</div>
-					<div class="col-5"></div>
-				</div>
-
-				<div class="row">
-					<div class="col-sm">
-						<span class="current-weather-emoji">☀️</span>
-					</div>
-
-					<div class="col-sm current-temp">
-						<span
-							class="current-temp"
-							id="current-temperature">
-						</span>
-						<span class="current-temp-degree"
-							><a
-								href="#"
-								id="fahrenheit-link"
-								>°F
-							</a>
-							|
-							<a
-								href="#"
-								id="celsius-link"
-								>°C</a
-							>
-						</span>
-					</div>
-					<div class="col-5"></div>
-				</div>
-			</div>
-			<!--
-	Current Weather Info - GRID 
--->
-
-			<div class="card">
-				<div class="card-title">
-					<div class="row">
-						<div class="col-sm">
-							<h4>Sun.</h4>
-							<h3>🌤</h3>
-							<p><b>90°F </b>| 70°F</p>
-						</div>
-						<div class="col-sm">
-							<h4 class="days">Mon.</h4>
-							<h3>☀️</h3>
-							<p><b>90°F </b>| 71°F</p>
-						</div>
-						<div class="col-sm">
-							<h4 class="days">Tues.</h4>
-							<h3>☀️</h3>
-							<p><b>84°F </b>| 66°F</p>
-						</div>
-						<div class="col-sm">
-							<h4 class="days">Wed.</h4>
-							<h3>⛅️</h3>
-							<p><b>84°F </b>| 74°F</p>
-						</div>
-						<div class="col-sm">
-							<h4 class="days">Thurs.</h4>
-							<h3>🌥</h3>
-							<p><b>83°F </b>| 73°F</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<p>
-				<a
-					href="https://github.com/evelynp111/WeatherApp-Project"
-					target="_blank">
-					Open-Source code by</a
-				>: Evelyn P.
-			</p>
 		</div>
 		<script src="src/app.js"></script>
 	</body>
