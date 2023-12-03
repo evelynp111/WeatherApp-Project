@@ -1,142 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>Weather App</title>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-			crossorigin="anonymous" />
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-			crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-		<link
-			rel="stylesheet"
-			href="src/styles.css" />
-		<link
-			rel="preconnect"
-			href="https://fonts.googleapis.com" />
-		<link
-			rel="preconnect"
-			href="https://fonts.gstatic.com"
-			crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-			rel="stylesheet" />
-	</head>
-	<body>
-		<div class="container">
-			<div class="weather-app-wrapper">
-				<div class="weather-app">
-					<form
-						id="search-form"
-						class="mb-3">
-						<div class="row">
-							<div class="col-4">
-								<h1 id="city"></h1>
-							</div>
-							<div class="col-4">
-								<input
-									type="search"
-									placeholder="Type a city name..."
-									class="form-control"
-									id="city-input"
-									autocomplete="off" />
-							</div>
-							<div class="col-3">
-								<input
-									type="submit"
-									value="Search"
-									class="btn btn-secondary w-100" />
-							</div>
-						</div>
-					</form>
-					<div class="overview">
-						<h1 id="city"></h1>
-						<ul>
-							<li id="date"></li>
-							<li id="description"></li>
-						</ul>
-					</div>
-					<div class="row">
-						<div class="col-6">
-							<div class="d-flex weather-temperature">
-								<img
-									src=""
-									alt="cloudy weather image"
-									id="icon" />
-								<div>
-									<strong id="temperature"></strong
-									><span class="units"
-										><a
-											href="#"
-											id="fahrenheit-link"
-											class="active"
-											>°F</a
-										>
-										|
-										<a
-											href="#"
-											id="celsius-link"
-											>°C</a
-										></span
-									>
-								</div>
-							</div>
-						</div>
-						<div class="col-6">
-							<ul>
-								<li>
-									Humidity: <span id="humidity"></span>%
-								</li>
-								<li>Wind: <span id="wind"></span> mp/h</li>
-							</ul>
-						</div>
-					</div>
-					<div class="weather-forecast">
-						<div class="row">
-							<div class="col-2">
-								<div class="weather-forecast-date">Thu</div>
-								<img
-									src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png"
-									width="38" />
-								<div class="weather-forecast-temperatures">
-									<span
-										class="weather-forecast-temperatures-max"
-										>77°</span
-									>
-									<span
-										class="weather-forecast-temperatures-min"
-										>44°</span
-									>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<small>
-					This project was coded by:
-					<a
-						href="https://github.com/evelynp111/WeatherApp-Project"
-						target="_blank"
-						>Evelyn</a
-					>
-					and is hosted on
-					<a
-						href="https://keen-biscochitos-fbc596.netlify.app/"
-						target="_blank"
-						>Netlify</a
-					>.
-				</small>
-			</div>
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="src/styles.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form
+            id="search-form"
+            class="mb-3">
+            <div class="row">
+              <div class="col-4">
+                <h1 id="city"></h1>
+              </div>
+              <div class="col-4">
+                <input
+                  type="search"
+                  placeholder="Type a city name..."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off" />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-secondary w-100" />
+              </div>
+            </div>
+          </form>
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li id="date"></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img
+                  src=""
+                  alt="cloudy weather image"
+                  id="icon" />
+                <div>
+                  <strong id="temperature"></strong
+                  ><span class="units"
+                    ><a
+                      href="#"
+                      id="fahrenheit-link"
+                      class="active"
+                      >°F</a
+                    >
+                    |
+                    <a
+                      href="#"
+                      id="celsius-link"
+                      >°C</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>
+                  Humidity: <span id="humidity"></span>%
+                </li>
+                <li>Wind: <span id="wind"></span> mp/h</li>
+              </ul>
+            </div>
+          </div>
 
-		<script src="src/app.js"></script>
-	</body>
+          <div
+            class="weather-forecast"
+            id="forecast"></div>
+        </div>
+        <small>
+          This project was coded by:
+          <a
+            href="https://github.com/evelynp111/WeatherApp-Project"
+            target="_blank"
+            >Evelyn</a
+          >
+          and is hosted on
+          <a
+            href="https://keen-biscochitos-fbc596.netlify.app/"
+            target="_blank"
+            >Netlify</a
+          >.
+        </small>
+      </div>
+    </div>
+
+    <script src="src/app.js"></script>
+  </body>
 </html>
