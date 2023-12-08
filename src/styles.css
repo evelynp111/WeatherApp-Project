@@ -93,3 +93,9 @@ li:first-letter {
 .weather-forecast-icon img {
   width: 50px;
 }
+
+.project-author {
+  text-align: center;
+  display: block;
+  font-size: 12px;
+}
