@@ -56,6 +56,7 @@ function displayTemperature(response) {
     "alt",
     response.data.condition.description
   );
+  getForecast(response.data.city);
 }
 
 function search(city) {
@@ -95,7 +96,15 @@ function displayFahrenheitTemp(event) {
   );
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "fbf3f590d8fa5cdo2b6a6d68f4tc4ef2";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
@@ -141,4 +150,3 @@ fahrenheitLink.addEventListener(
 );
 
 search("Los Angeles");
-displayForecast();
