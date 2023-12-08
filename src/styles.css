@@ -89,3 +89,7 @@ li:first-letter {
 .weather-forecast-temperatures-min {
   opacity: 0.5;
 }
+
+.weather-forecast-icon img {
+  width: 50px;
+}
