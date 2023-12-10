@@ -76,7 +76,6 @@ function displayCelsiusTemp(event) {
   event.preventDefault();
   let temperatureElement =
     document.querySelector("#temperature");
-  //remove active calss from cels. link
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
   let celsiusTemperature =

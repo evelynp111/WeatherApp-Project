@@ -36,24 +36,21 @@
         <div class="weather-app">
           <form
             id="search-form"
-            class="mb-3">
+            class="d-flex justify-content-end mb-3">
             <div class="row">
-              <div class="col-4">
-                <h1 id="city"></h1>
-              </div>
-              <div class="col-5">
+              <div class="searchBar col-8">
                 <input
                   type="search"
-                  placeholder="Type a city name"
+                  placeholder="Type a city name..."
                   class="form-control"
                   id="city-input"
                   autocomplete="off" />
               </div>
-              <div class="col-3">
+              <div class="searchBar col-4">
                 <input
                   type="submit"
                   value="Search"
-                  class="btn btn-secondary w-100" />
+                  class="btn btn-secondary w-80" />
               </div>
             </div>
           </form>
@@ -61,11 +58,10 @@
             <h1 id="city"></h1>
             <ul>
               <li id="date"></li>
-              <li id="description"></li>
             </ul>
           </div>
-          <div class="row">
-            <div class="col-6">
+          <div class="row current-conditions">
+            <div class="col-7">
               <div class="d-flex weather-temperature">
                 <img
                   src=""
@@ -90,8 +86,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-6">
-              <ul>
+            <div class="col-5">
+              <ul class="weather-description">
+                <li id="description"></li>
                 <li>
                   Humidity: <span id="humidity"></span>%
                 </li>
