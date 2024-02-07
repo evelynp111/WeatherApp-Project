@@ -1,6 +1,6 @@
 👋 Hey there! Some info about this project...
 
-👩🏻‍💻This project was created as a project while enrolled in SheCodes coding workshop.
+👩🏻‍💻This project was created while I was enrolled in a SheCodes coding workshop.
 
 🛠I first mapped out the design by creating a wireframe, then began to code the app using HTML, CSS, and Javascript.
 
